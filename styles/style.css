@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    /* Primary color */
+    --orange: hsl(25, 97%, 53%);
+
+    /* Custom colors */
+    --bg: hsl(214, 20%, 25%);
+}
+
+* {
+    transition: .1s linear;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    display: grid;
+    place-items: center;
+    background: var(--very-dark-blue);
+    height: 100vh;
+}
+
+.rating-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: var(--dark-blue);
+    padding: 40px 25px;
+    border-radius: 20px;
+    line-height: 25px;
+}
+
+.icon-star {
+    height: 45px;
+    width: 45px;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.heading {
+    width: 100%;
+}
+
+.heading h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.heading p.info {
+    color: var(--medium-grey);
+}
+
+.rating-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.rating-btn {
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    color: var(--light-grey);
+    background: var(--bg);
+    height: 45px;
+    width: 45px;
+}
+
+.submit-btn {
+    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--orange);
+    border-radius: 50px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.rating-btn:hover {
+    color: var(--white);
+    background: var(--medium-grey);
+}
+
+.active {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.submit-btn:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.thank_you_state_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: var(--dark-blue);
+    padding: 40px 25px;
+    border-radius: 20px;
+    line-height: 25px;
+}
+
+.description {
+    background: var(--bg);
+    border-radius: 50px;
+    text-align: center;
+    width: max-content;
+    padding: 3px 17px;
+}
+
+.description .description-text {
+    color: var(--orange);
+}
+
+.appreciation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.appreciation .header {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.appreciation .info {
+    color: var(--medium-grey);
+    font-weight: 400;
+}
+
+
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--medium-grey); 
+}
+
+.attribution a { 
+    text-decoration: none;
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 500px) {
+    .rating-card {
+        margin: 15rem auto;
+        max-width: 80%;
+    }
+
+    .thank_you_state_container {
+        margin: 15rem auto;
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 500px) {
+    .rating-card {
+        margin: 15rem auto;
+        max-width: 360px;
+        gap: 30px;
+    }
+
+    .rating-btn {
+        height: 55px;
+        width: 55px;
+    }
+
+    .thank_you_state_container {
+        margin: 15rem auto;
+        max-width: 340px;
+        gap: 30px;
+    }
+}
