@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Interactive rating component](https://your-solution-url.com)
-- Live Site URL: [Interactive rating component](https://your-live-site-url.com)
+- Solution URL: [Interactive rating component](https://github.com/wuzgood98/Interactive-rating-component)
+- Live Site URL: [Interactive rating component](https://wuzgood98.github.io/Interactive-rating-component/)
 
 ## My process
 
