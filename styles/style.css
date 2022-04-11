@@ -80,8 +80,8 @@ body {
     font-family: 'Overpass', sans-serif;
     color: var(--light-grey);
     background: var(--bg);
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
 }
 
 .submit-btn {
