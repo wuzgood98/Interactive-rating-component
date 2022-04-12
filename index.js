@@ -1,28 +1,35 @@
 const ratingButtons = [...document.querySelectorAll('.rating-btn')]
 const submitButton = document.querySelector('.submit-btn')
 
-let ratingData = []
+let ratingData = [0]
 
 const listenButtons = array => {
     array.forEach(button => {
         button.addEventListener('click', () => {
             const clickedOption = button.textContent
             ratingData.push(clickedOption)
-            button.classList.toggle('active')
+            activateClickedOption(button)
         })
     })
 }
-
 
 const removeCard = () => {
     const card = document.querySelector('.rating-card')
     card.remove()
 }
 
+const activateClickedOption = button => {
+    ratingButtons.forEach(b => b.classList.remove('active'))
+    button.classList.add('active')
+}
+
 const renderCards = () => {
     removeCard()
-    const lastItem = ratingData[ratingData.length - 1]
-    const rating = lastItem
+    let lastItem = ratingData[ratingData.length - 1]
+    let rating = lastItem
+    if (!listenButtons) {
+        lastItem = 0
+    }
     const card = document.querySelector('.card-container')
     const appreciationCard = document.createElement('section')
     appreciationCard.classList.add('thank_you_state_container')
